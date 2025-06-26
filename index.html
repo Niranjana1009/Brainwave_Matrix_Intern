@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Daily Scheduler - Select Day</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="intro-container">
+      <h1>Daily Scheduler</h1>
+      <p>Select a day to plan or view schedule:</p>
+      <input type="date" id="selectedDate" />
+      <div class="btn-group">
+        <button id="startBtn">Get Started</button>
+        <button id="todayBtn">Display Today's Plan</button>
+      </div>
+      <div id="todayTasks"></div>
+    </div>
+
+    <script>
+      document.getElementById("startBtn").addEventListener("click", function () {
+        const date = document.getElementById("selectedDate").value;
+        if (!date) {
+          alert("Please select a date first.");
+          return;
+        }
+        localStorage.setItem("selectedDate", date);
+        window.location.href = "scheduler.html";
+      });
+
+      document.getElementById("todayBtn").addEventListener("click", function () {
+        const date = document.getElementById("selectedDate").value;
+        if (!date) {
+          alert("Please select a date first.");
+          return;
+        }
+        let tasks = [];
+        for (let hour = 6; hour <= 18; hour++) {
+          const hourStr = hour < 10 ? "0" + hour : hour;
+          const item = localStorage.getItem(`${date}-${hourStr}`);
+          if (item && item.trim()) {
+            tasks.push(`<li><strong>${hourStr}:00</strong> - ${item}</li>`);
+          }
+        }
+        const taskDisplay = document.getElementById("todayTasks");
+        taskDisplay.innerHTML = tasks.length
+          ? `<ul>${tasks.join("")}</ul>`
+          : `<p class="notask">No tasks for today. Schedule now!</p>`;
+      });
+    </script>
+  </body>
+</html>

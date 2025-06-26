@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  
+}
+
+body {
+  background-color: #f1f2f6;
+  font-size: 16px;
+  color: #2f3542;
+}
+
+.jumbotron {
+  background-image: url(assets/image.png);
+  text-align: center;
+  color: black;
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 10px;
+  background-color: #2f3542;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 8px;
+  height: 80px;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hour {
+  width: 100px;
+  background-color: #ffdd59;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.time-block {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  resize: none;
+  font-size: 15px;
+}
+
+.description {
+  font-weight: 500;
+}
+
+.past {
+  background-color: #dfe4ea;
+}
+
+.present {
+  background-color: #ffa502;
+}
+
+.future {
+  background-color: #7bed9f;
+}
+
+.saveBtn {
+  width: 60px;
+  height: 100%;
+  background-color: #2ed573;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.saveBtn:hover {
+  background-color: #1eae60;
+}
+
+.intro-container {
+  height: 100vh;
+  background-image: url(assets/image1.png);
+  background-repeat: none;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   color: black
+}
+
+.intro-container h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+    color: black
+}
+
+.intro-container input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: black ;
+}
+
+.notask {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #2f3542;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
