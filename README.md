@@ -2,12 +2,13 @@
 Daily Scheduler Web App
 
 An interactive and feature-rich daily planner built using **HTML, CSS and JavaScript**. This scheduler allows users to plan their day from **6:00 AM to 6:00 PM**, store tasks per selected date, and even receive **notifications** before upcoming tasks. It also includes PDF export functionality.
+
 🌟 Features
  1. 📅 **Date-Based Scheduling**
 - Users select a specific date to view or create a personalized schedule.
 - Each date's tasks are saved and retrieved using `localStorage`.
 
-2. 💡 ** Start Page**
+2. 💡 **Start Page**
 - Two clear actions:
   - `Get Started`: Opens the scheduler for the selected date.
   - `Display Today's Plan`: Shows tasks already added for today in a neat list format.
